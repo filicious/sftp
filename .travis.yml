@@ -1,0 +1,15 @@
+language: php
+php:
+    - "5.4"
+    - "5.3"
+before_script:
+    - composer install --dev
+script: ./vendor/phpunit/phpunit/phpunit.php -c phpunit.xml.dist
+notifications:
+    email:
+        - tristan.lins@bit3.de
+        - c.schiffler@cyberspectrum.de
+        - oliver@hofff.com
+    irc:
+        channels: "irc.freenode.org#filicious"
+        use_notice: true
