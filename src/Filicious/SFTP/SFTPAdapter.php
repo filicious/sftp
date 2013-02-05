@@ -72,8 +72,8 @@ class SFTPAdapter
 			->open()
 			->set(FilesystemConfig::BASEPATH, null);
 
-		if ($basepath instanceof FilesystemConfig) {
-			$this->config->merge($basepath);
+		if ($host instanceof FilesystemConfig) {
+			$this->config->merge($host);
 		}
 		else if(is_string($host)) {
 			$this->config->set(FilesystemConfig::HOST, $host);
